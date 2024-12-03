@@ -25,10 +25,11 @@ footer {
 }
 
 .social_icon {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
+  /* border: solid black; */
 }
 
 .social_icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   filter: grayscale(0%);
 }

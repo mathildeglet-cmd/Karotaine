@@ -1,0 +1,36 @@
+.filtreContainer {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.filtreInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%; /* Largeur de l'input */
+    font-size: 56px;
+}
+
+.filtreSelect {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.filtreButton {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #2c7722; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.filtreButton:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}

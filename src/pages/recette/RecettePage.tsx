@@ -1,20 +1,24 @@
 import style from "./recettePage.module.css";
 import { data, useLoaderData } from "react-router-dom";
+import type { MealDataType } from "../../lib/definitions";
+import { MealCard } from "../../components/MealCard/MealCard";
 import Filtre from "../../components/Filtre/Filtre";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
-  const data=dataRecipe.meals;
-  console.log(dataRecipe);
+  const data : MealDataType []= dataRecipe.meals;
+
   return (
     <>
       <Filtre 
       data= {data}/>
-      {dataRecipe.meals.map((m) => (
-        <h1 key={m.idMeal} className={style.h1}>
-          {m.strMeal}
-        </h1>
+      {data.map((m) => (
+        
+          <MealCard key={m.idMeal} data ={m}/>
+        
       ))}
+
+    
     </>
   );
 }

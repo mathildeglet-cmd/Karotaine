@@ -1,0 +1,19 @@
+.cardsection {
+    display: flex;
+    flex-direction: column-row;
+    flex-wrap: wrap;
+}
+
+.picture {
+    width: 50vh;
+
+}
+
+.category {
+    font-size: 4em;
+}
+
+.picture {
+    font-size: 1em;
+} 
+

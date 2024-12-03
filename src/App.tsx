@@ -9,7 +9,7 @@ import icon from "../public/icon.png";
 function App() {
   const location = useLocation();
 
-  const knownPaths: string[] = ["/", "/recipe", "/contact", "/quiz"]; // Constant
+  const knownPaths: string[] = ["/", "/recipe", "/contact", "/quiz"];
 
   useEffect(() => {
     document.body.className = "body-default";
@@ -19,7 +19,7 @@ function App() {
     } else if (!knownPaths.some((path) => location.pathname.startsWith(path))) {
       document.body.classList.add("body-error");
     }
-  }, [location]); // Only `location` is necessary
+  }, [location]);
 
   return (
     <>
@@ -30,7 +30,6 @@ function App() {
         </div>
       </a>
       <NavBar />
-
       <div className="pages">
         <Outlet />
       </div>

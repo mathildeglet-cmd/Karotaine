@@ -1,31 +1,31 @@
-import { useState } from "react";
-import "./filtre.css"; // Assurez-vous d'importer le fichier CSS
+// import { useForm } from "react-hook-form";
+import style from "./filtre.module.css";
 
-function Filtre({data}) {
-  const [query, setQuery] = useState("");
-
-  const 
-
-
-  const handleFilter = () => {
-    // Logique de filtrage ici
-    console.log("Filtrer par:", query);
+function Filtre({
+  query,
+  setQuery,
+}: { query: string; setQuery: (s: string) => void }) {
+  const handleChange = (e: { target: { value: string } }) =>
+    setQuery(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitValue(submitValue);
   };
 
   return (
-    <div className="filtreContainer">
+    <form className={style.filtreContainer} onSubmit={handleSubmit}>
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Carotcher..."
-        className="filtreInput"
+        placeholder="Choose your ingredient"
+        className={style.filtreInput}
+        onChange={handleChange}
       />
 
-      <button onClick={handleFilter} className="filtreButton" type="button">
+      <button className={style.filtreButton} type="submit">
         Filter
       </button>
-    </div>
+    </form>
   );
 }
 

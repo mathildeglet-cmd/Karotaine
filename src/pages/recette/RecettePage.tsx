@@ -3,6 +3,7 @@ import type { MealDataType } from "../../lib/definitions";
 import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
 import Filtre from "../../components/Filtre/Filtre";
+import style from "./recettePage.module.css";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
@@ -36,10 +37,16 @@ function Recipe() {
 
   return (
     <>
-      <Filtre query={query} setQuery={setQuery} onSubmit={handleSubmit} />
-      {submittedQuery.toLowerCase() === "carrot" && filteredData.length > 0
-        ? filteredData.map((meal) => <MealCard key={meal.idMeal} data={meal} />)
-        : submittedQuery && <p>No carrot recipes found!</p>}
+      <section className={style.recettePage}>
+        <Filtre query={query} setQuery={setQuery} onSubmit={handleSubmit} />
+        <section className={style.displayCards}>
+          {submittedQuery.toLowerCase() === "carrot" && filteredData.length > 0
+            ? filteredData.map((meal) => (
+                <MealCard key={meal.idMeal} data={meal} />
+              ))
+            : submittedQuery && <p>No carrot recipes found!</p>}
+        </section>
+      </section>
     </>
   );
 }

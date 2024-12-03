@@ -1,6 +1,7 @@
 import type { MealDataType } from "../../lib/definitions";
 import style from "./MealCard.module.css";
 
+
 export function MealCard({ data }: { data: MealDataType }) {
   return (
     <section className={style.cards}>

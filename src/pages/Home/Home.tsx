@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Home.module.css";
-
+import heroBanner from "../../../public/heroBanner.jpg";
 import OriginalCarrot from "../../assets/images/OriginalCarrot.png";
 import FlatteredCarrot from "../../assets/images/FlatteredCarrot.png";
 import AngryCarrot from "../../assets/images/AngryCarrot.png";
@@ -8,18 +8,24 @@ import AngryCarrot from "../../assets/images/AngryCarrot.png";
 function Home() {
   return (
     <div className={style.HomePage}>
-      <div className={style.HomeTitle}>
-        <h1>Home Page</h1>
-        <div className={style.PlaceholderImages}>
-          <span className={style.riseShake}>
-            <img src={OriginalCarrot} alt="Original Carrot" />
-            <img src={FlatteredCarrot} alt="Flattered Carrot" />
-            <img src={AngryCarrot} alt="Angry Carrot" />
-          </span>
+      <div className={style.HeroBanner}>
+        <img src={heroBanner} alt="Carrot Field Hero Banner" />
+        <div className={style.BannerText}>
+          <h1>CARROT MANIA</h1>
+          <h2>Répandez la bonté</h2>
         </div>
       </div>
+
+      <div className={style.PlaceholderImages}>
+        <span className={style.riseShake}>
+          <img src={OriginalCarrot} alt="Original Carrot" />
+          <img src={FlatteredCarrot} alt="Flattered Carrot" />
+          <img src={AngryCarrot} alt="Angry Carrot" />
+        </span>
+      </div>
+
       <button type="button" className={style.styled}>
-        <Link to="/recipe">Don't forget to eat your veggies !</Link>
+        <Link to="/recipe">Don't forget to eat your veggies!</Link>
       </button>
 
       <div className={style.VeggieReminder}>

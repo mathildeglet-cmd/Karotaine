@@ -1,9 +1,10 @@
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Filtre from "./components/Filtre/Filtre";
+
 import { useEffect } from "react";
 import "./App.css";
+import icon from "../public/icon.png";
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,14 @@ function App() {
 
   return (
     <>
+      {" "}
+      <a href="/home">
+        <div className="logo">
+          <img src={icon} alt="Carrot is the truth" />
+        </div>
+      </a>
       <NavBar />
+
       <div className="pages">
         <Outlet />
       </div>

@@ -1,3 +1,8 @@
+* {
+  font-style: bolder;
+  font-size: 20px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

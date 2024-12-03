@@ -1,18 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: var(--font-family);
 }
 
-/* Font Import */
-/* @import url(''); */
-
-/* Root Variables */
 :root {
   --primary-color: #095228;
   --secondary-color: #fd7e14;
   --dark: #001500;
   --light: #f8fdf0;
+  --font-family: "Poppins", sans-serif;
 }
 
 .pages {

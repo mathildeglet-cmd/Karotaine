@@ -14,7 +14,7 @@ function Contact() {
 
     if (
       ![
-        "Principle 1",
+        "Benevolent",
         "Principle 2",
         "Principle 3",
         "Principle 4",
@@ -119,7 +119,7 @@ function Contact() {
         </div>
       )}
       <div className={style.principles}>
-        <div className={style.placeholder}>Principle 1</div>
+        <div className={style.placeholder}>Benevolent</div>
         <div className={style.placeholder}>Principle 2</div>
         <div className={style.placeholder}>Principle 3</div>
         <div className={style.placeholder}>Principle 4</div>

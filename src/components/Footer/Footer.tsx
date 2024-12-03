@@ -10,7 +10,7 @@ function Footer() {
             <img src={icon} alt="icone twitter" className={style.social_icon} />
           </a>
         </div>
-        <p className={style.creators}>Hackathon @2024</p>
+        <p className={style.creators}>Carrot Mania @2024</p>
       </footer>
     </section>
   );

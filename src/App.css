@@ -16,7 +16,7 @@
 }
 
 .pages {
-  color: #316685;
+  color: var(--primary-color);
   text-align: center;
   font-size: calc(1.5rem + 2vw);
 }

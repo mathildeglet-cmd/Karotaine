@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import About from "./pages/About/About";
+import RecettePage from "../src/pages/recette/RecettePage";
 import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
@@ -16,7 +16,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <RecettePage />,
+        loader: () =>
+          fetch("http://www.themealdb.com/api/json/v1/1/search.php?s"),
       },
       {
         path: "/contact/:id",

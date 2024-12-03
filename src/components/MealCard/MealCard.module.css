@@ -1,31 +1,54 @@
-.cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    
-}
-.card{
-    display: flex;
-    flex-direction: column;
+.cards {
+  display: flex;
+  flex-direction: column;
+  border: solid var(--primary-color);
+  width: 15vw;
+  align-items: center;
+  margin-bottom: 10vh;
+  padding-bottom: 1em;
+  border-radius: 5px;
 }
 
-.mealName{
-font-size: 0.5em;
+.mealName {
+  font-size: 1.2em;
+  color: var(--secondary-color);
 }
 
 .picture {
-    width: 20vh;
+  max-width: 15vw;
 }
 
 .category {
-    font-size: 0.5em;
+  font-size: 1em;
 }
 
 .picture {
-    font-size: 0.5em;
-} 
-
-.ingredient{
-    font-size:0.5em;
+  font-size: 1em;
 }
 
+.ingredient {
+  font-size: 1em;
+  list-style: none;
+  position: relative;
+}
+.ingredient::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url("../../../public/bullet.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.listIngredient {
+  width: 13em;
+  text-align: center;
+  color: var(--primary-color);
+}
+.h2ingredient {
+  color: var(--secondary-color);
+  margin-bottom: 1em;
+}

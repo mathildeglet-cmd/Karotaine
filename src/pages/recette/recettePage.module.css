@@ -1,0 +1,22 @@
+.displayCards {
+  display: flex;
+  gap: 3em;
+  width: 80vw;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.recettePage {
+  margin: auto;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filter {
+  width: 60vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}

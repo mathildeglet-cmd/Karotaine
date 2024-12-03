@@ -1,11 +1,13 @@
 import style from "./recettePage.module.css";
 import { useLoaderData } from "react-router-dom";
+import type { MealDataType } from "../../lib/definitions";
+import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
 import Filtre from "../../components/Filtre/Filtre";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
-  const data = dataRecipe.meals;
+  const data : MealDataType []= dataRecipe.meals;
 
   const [query, setQuery] = useState("");
   const filterIngredient = data.filter(
@@ -19,14 +21,18 @@ function Recipe() {
       d.strIngredient7.toLowerCase().includes(query.toLowerCase()),
   );
 
+  const data : MealDataType []= dataRecipe.meals;
+
   return (
     <>
       <Filtre query={query} setQuery={setQuery} />
       {filterIngredient.map((m) => (
-        <h1 key={m.idMeal} className={style.h1}>
-          {m.strIngredient3}
+        <MealCard key={m.idMeal} data ={m}/>
+          
         </h1>
       ))}
+
+    
     </>
   );
 }

@@ -11,9 +11,11 @@ function Home() {
       <div className={style.HomeTitle}>
         <h1>Home Page</h1>
         <div className={style.PlaceholderImages}>
-          <img src={OriginalCarrot} alt="Original Carrot" />
-          <img src={FlatteredCarrot} alt="Flattered Carrot" />
-          <img src={AngryCarrot} alt="Angry Carrot" />
+          <span className={style.riseShake}>
+            <img src={OriginalCarrot} alt="Original Carrot" />
+            <img src={FlatteredCarrot} alt="Flattered Carrot" />
+            <img src={AngryCarrot} alt="Angry Carrot" />
+          </span>
         </div>
       </div>
       <button type="button" className={style.styled}>

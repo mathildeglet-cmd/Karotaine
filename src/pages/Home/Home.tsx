@@ -1,5 +1,5 @@
 import style from "./Home.module.css";
-import { MealCard } from "../../components/MealCard";
+
 
 function Home() {
   return (
@@ -10,8 +10,6 @@ function Home() {
         click here
       </button>
     </div>
-
-    <MealCard/>
     </>
   );
 }

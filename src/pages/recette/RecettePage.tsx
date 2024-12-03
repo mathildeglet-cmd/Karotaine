@@ -1,18 +1,23 @@
 import style from "./recettePage.module.css";
 import { useLoaderData } from "react-router-dom";
+import type { MealDataType } from "../../lib/definitions";
+import { MealCard } from "../../components/MealCard/MealCard";
 
-function About() {
+export default function RecettePage() {
   const dataRecipe = useLoaderData();
-  console.log(dataRecipe);
+  const data : MealDataType []= dataRecipe.meals;
+
   return (
     <>
-      {dataRecipe.meals.map((m) => (
-        <h1 key={m.idMeal} className={style.h1}>
-          {m.strMeal}
-        </h1>
+      {data.map((m) => (
+        
+          <MealCard key={m.idMeal} data ={m}/>
+        
       ))}
+
+    
     </>
   );
 }
 
-export default About;
+

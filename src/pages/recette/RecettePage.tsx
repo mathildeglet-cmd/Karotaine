@@ -2,7 +2,7 @@ import style from "./recettePage.module.css";
 import { data, useLoaderData } from "react-router-dom";
 import Filtre from "../../components/Filtre/Filtre";
 
-function About() {
+function Recipe() {
   const dataRecipe = useLoaderData();
   const data=dataRecipe.meals;
   console.log(dataRecipe);
@@ -19,4 +19,4 @@ function About() {
   );
 }
 
-export default About;
+export default Recipe;

@@ -19,21 +19,21 @@ function NavBar() {
           alt="une terre avec un pins rouge au couleur de notre charte"
         />
       )} */}
-      <nav className="navbar">
+      <nav className={style.navbar}>
         <div className={style.navbarHeader}>
           <button
-            className="burger-menu"
+            className={style.burgerMenu}
             type="button"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <img src={menuIcon} alt="Menu burger" className="menu-icon" />
+            <img src={menuIcon} alt="Menu burger" className={style.menuIcon} />
           </button>
         </div>
-        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+        <ul className={`${style.navbarLinks} ${isMenuOpen ? style.open : ""}`}>
           <li>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-              About
+            <Link to="/recipe" onClick={() => setIsMenuOpen(false)}>
+              Recipe
             </Link>
           </li>
           <li>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import logo from "../assets/logo.png";
 import menuIcon from "../../assets/images/menu.png";
 import style from "./NavBar.module.css";
 
@@ -12,13 +11,6 @@ function NavBar() {
   };
   return (
     <>
-      {/* {location.pathname === "/" && (
-        <img
-          className="logo"
-          src={logo}
-          alt="une terre avec un pins rouge au couleur de notre charte"
-        />
-      )} */}
       <nav className={style.navbar}>
         <div className={style.navbarHeader}>
           <button
@@ -32,23 +24,19 @@ function NavBar() {
         </div>
         <ul className={`${style.navbarLinks} ${isMenuOpen ? style.open : ""}`}>
           <li>
-            <Link to="/recipe" onClick={() => setIsMenuOpen(false)}>
-              Recipe
-            </Link>
-          </li>
-          <li>
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/contact/123" onClick={() => setIsMenuOpen(false)}>
-              Contact
+            <Link to="/recipe" onClick={() => setIsMenuOpen(false)}>
+              Recipe
             </Link>
           </li>
+
           <li>
-            <Link to="/projet" onClick={() => setIsMenuOpen(false)}>
-              Projet
+            <Link to="/contact/123" onClick={() => setIsMenuOpen(false)}>
+              Contact
             </Link>
           </li>
         </ul>

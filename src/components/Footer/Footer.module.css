@@ -1,5 +1,4 @@
 footer {
-  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: var(--secondary-color);
@@ -22,11 +21,6 @@ footer {
   width: 30px;
   height: 30px;
   transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social_icon {
-  /* filter: grayscale(100%); */
-  /* border: solid black; */
 }
 
 .social_icon:hover {

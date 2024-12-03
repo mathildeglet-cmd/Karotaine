@@ -1,5 +1,4 @@
-import style from "./recettePage.module.css";
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData } from "react-router-dom";
 import type { MealDataType } from "../../lib/definitions";
 import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
@@ -7,8 +6,8 @@ import Filtre from "../../components/Filtre/Filtre";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
-  const data : MealDataType []= dataRecipe.meals;
-
+  const data: MealDataType[] = dataRecipe.meals;
+  const [submitValue, setSubmitValue] = useState("");
   const [query, setQuery] = useState("");
   const filterIngredient = data.filter(
     (d) =>
@@ -20,19 +19,20 @@ function Recipe() {
       d.strIngredient6.toLowerCase().includes(query.toLowerCase()) ||
       d.strIngredient7.toLowerCase().includes(query.toLowerCase()),
   );
-
-  const data : MealDataType []= dataRecipe.meals;
-
+  // const carrotError = query !== "carrot" ? <Navigate to =" /" :
+  console.log(query);
   return (
     <>
-      <Filtre query={query} setQuery={setQuery} />
+      <Filtre
+        data={data}
+        query={query}
+        setQuery={setQuery}
+        submitValue={submitValue}
+        setSubmitValue={setSubmitValue}
+      />
       {filterIngredient.map((m) => (
-        <MealCard key={m.idMeal} data ={m}/>
-          
-        </h1>
+        <MealCard key={m.idMeal} data={m} />
       ))}
-
-    
     </>
   );
 }

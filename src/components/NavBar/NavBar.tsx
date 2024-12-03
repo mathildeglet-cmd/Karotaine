@@ -32,8 +32,8 @@ function NavBar() {
         </div>
         <ul className={`${style.navbarLinks} ${isMenuOpen ? style.open : ""}`}>
           <li>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-              About
+            <Link to="/recipe" onClick={() => setIsMenuOpen(false)}>
+              Recipe
             </Link>
           </li>
           <li>

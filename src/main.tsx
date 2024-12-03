@@ -15,10 +15,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "/recipe",
         element: <RecettePage />,
         loader: () =>
-          fetch("http://www.themealdb.com/api/json/v1/1/search.php?s"),
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s"),
       },
       {
         path: "/contact/:id",

@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   const location = useLocation();
 
-  const knownPaths: string[] = ["/", "/about", "/contact", "/quiz"]; // Constant
+  const knownPaths: string[] = ["/", "/recipe", "/contact", "/quiz"]; // Constant
 
   useEffect(() => {
     document.body.className = "body-default";

@@ -1,11 +1,8 @@
 import { useState } from "react";
 import "./filtre.css"; // Assurez-vous d'importer le fichier CSS
 
-function Filtre({data}) {
+function Filtre({ data }) {
   const [query, setQuery] = useState("");
-
-  const 
-
 
   const handleFilter = () => {
     // Logique de filtrage ici

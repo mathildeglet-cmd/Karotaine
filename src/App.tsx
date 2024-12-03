@@ -23,8 +23,6 @@ function App() {
   return (
     <>
       <NavBar />
-      <Filtre />
-
       <div className="pages">
         <Outlet />
       </div>

@@ -52,4 +52,4 @@ export type MealDataType = {
   strImageSource: string;
   strCreativeCommonsConfirmed: null;
   dateModified: null;
-};
+} 

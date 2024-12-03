@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,17 +17,17 @@
   background-color: var(--secondary-color);
 }
 
-.navbar-links {
+.navbarLinks {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
 
-.navbar-links li {
+.navbarLinks li {
   text-align: center;
 }
 
-.navbar-links a {
+.navbarLinks a {
   color: var(--light);
   text-decoration: none;
   display: flex;
@@ -36,7 +36,7 @@
   position: relative;
 }
 
-.navbar-links a::after {
+.navbarLinks a::after {
   position: absolute;
   width: 0%;
   height: 2px;
@@ -45,11 +45,11 @@
   transition: width 0.4s ease;
 }
 
-.navbar-links a:hover {
+.navbarLinks a:hover {
   color: #c6c42d;
 }
 
-.navbar-links a:hover::after {
+.navbarLinks a:hover::after {
   width: 100%;
 }
 
@@ -62,7 +62,7 @@
   z-index: 10000000000;
 }
 
-.burger-menu {
+.burgerMenu {
   display: none;
   position: absolute;
   top: 15px;
@@ -73,7 +73,7 @@
   z-index: 100000000;
 }
 
-.menu-icon {
+.menuIcon {
   width: 35px;
   height: auto;
 }
@@ -97,7 +97,7 @@
     z-index: 100000000;
   }
 
-  .navbar-links {
+  .navbarLinks {
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -110,11 +110,11 @@
     z-index: 1000000000;
   }
 
-  .navbar-links.open {
+  .navbarLinks.open {
     transform: translateY(0);
   }
 
-  .navbar-links li {
+  .navbarLinks li {
     margin: 15px 0;
   }
 }
@@ -127,7 +127,7 @@
     justify-content: space-between;
   }
 
-  .navbar-links {
+  .navbarLinks {
     flex-direction: row;
   }
 
@@ -139,5 +139,99 @@
   .logo {
     position: static;
     margin-left: auto;
+  }
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+}
+
+.navbarLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin-right: 3em;
+}
+
+.navbarLinks li {
+  text-align: center;
+}
+
+.navbarLinks a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.navbarLinks a::after {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.4s ease;
+}
+
+.navbarLinks a:hover {
+  color: #c6c42d;
+}
+
+.navbarLinks a:hover::after {
+  width: 100%;
+}
+
+.burgerMenu {
+  display: none;
+  position: absolute;
+  top: 0.5em;
+  right: 3em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100000000;
+}
+
+.menuIcon {
+  width: 35px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .burgerMenu {
+    display: block;
+  }
+
+  .navbarLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(9px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    background-color: yellow;
+  }
+
+  .navbarLinks.open {
+    transform: translateY(0);
+  }
+
+  .navbarLinks li {
+    margin: 15px 0;
   }
 }

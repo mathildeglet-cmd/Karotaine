@@ -1,7 +1,7 @@
 import style from "./recettePage.module.css";
 import { useLoaderData } from "react-router-dom";
 
-function About() {
+function Recipe() {
   const dataRecipe = useLoaderData();
   console.log(dataRecipe);
   return (
@@ -15,4 +15,4 @@ function About() {
   );
 }
 
-export default About;
+export default Recipe;

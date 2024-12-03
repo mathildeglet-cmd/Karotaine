@@ -1,31 +1,24 @@
-import { useState } from "react";
 import "./filtre.css"; // Assurez-vous d'importer le fichier CSS
 
-function Filtre({data}) {
-  const [query, setQuery] = useState("");
-
-  const 
-
-
-  const handleFilter = () => {
-    // Logique de filtrage ici
-    console.log("Filtrer par:", query);
+function Filtre({ query, setQuery }) {
+  const handleChange = (e) => {
+    setQuery(e.target.value);
   };
 
   return (
-    <div className="filtreContainer">
+    <form className="filtreContainer">
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
         placeholder="Carotcher..."
         className="filtreInput"
+        onChange={handleChange}
       />
 
-      <button onClick={handleFilter} className="filtreButton" type="button">
+      <button className="filtreButton" type="button">
         Filter
       </button>
-    </div>
+    </form>
   );
 }
 

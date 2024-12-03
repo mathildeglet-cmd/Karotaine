@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Filtre from "./components/Filtre/Filtre";
+
 import { useEffect } from "react";
 import "./App.css";
 
@@ -23,7 +23,6 @@ function App() {
   return (
     <>
       <NavBar />
-      <Filtre />
 
       <div className="pages">
         <Outlet />

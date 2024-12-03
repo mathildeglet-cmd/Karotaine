@@ -1,15 +1,20 @@
-// import { useForm } from "react-hook-form";
 import style from "./filtre.module.css";
 
 function Filtre({
   query,
   setQuery,
-}: { query: string; setQuery: (s: string) => void }) {
-  const handleChange = (e: { target: { value: string } }) =>
+  onSubmit,
+}: {
+  query: string;
+  setQuery: (s: string) => void;
+  onSubmit: () => void;
+}) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setQuery(e.target.value);
-  const handleSubmit = (e) => {
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitValue(submitValue);
+    onSubmit();
   };
 
   return (
@@ -21,7 +26,6 @@ function Filtre({
         className={style.filtreInput}
         onChange={handleChange}
       />
-
       <button className={style.filtreButton} type="submit">
         Filter
       </button>

@@ -1,4 +1,4 @@
-import { Navigate, useLoaderData } from "react-router-dom";
+import { useLoaderData, Navigate } from "react-router-dom";
 import type { MealDataType } from "../../lib/definitions";
 import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
@@ -7,32 +7,39 @@ import Filtre from "../../components/Filtre/Filtre";
 function Recipe() {
   const dataRecipe = useLoaderData();
   const data: MealDataType[] = dataRecipe.meals;
-  const [submitValue, setSubmitValue] = useState("");
+
   const [query, setQuery] = useState("");
-  const filterIngredient = data.filter(
-    (d) =>
-      d.strIngredient1.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient2.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient3.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient4.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient5.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient6.toLowerCase().includes(query.toLowerCase()) ||
-      d.strIngredient7.toLowerCase().includes(query.toLowerCase()),
-  );
-  // const carrotError = query !== "carrot" ? <Navigate to =" /" :
-  console.log(query);
+  const [submittedQuery, setSubmittedQuery] = useState("");
+  const [showPrompt, setShowPrompt] = useState(false);
+
+  const handleFilter = () => {
+    return data.filter((meal) =>
+      Object.values(meal).join(" ").toLowerCase().includes("carrot"),
+    );
+  };
+
+  const handleSubmit = () => {
+    if (query.toLowerCase() !== "carrot") {
+      setShowPrompt(true);
+    } else {
+      setSubmittedQuery(query);
+      setShowPrompt(false);
+    }
+  };
+
+  const filteredData = submittedQuery ? handleFilter() : [];
+
+  if (showPrompt) {
+    alert("You didn't type carrot!");
+    setShowPrompt(false);
+  }
+
   return (
     <>
-      <Filtre
-        data={data}
-        query={query}
-        setQuery={setQuery}
-        submitValue={submitValue}
-        setSubmitValue={setSubmitValue}
-      />
-      {filterIngredient.map((m) => (
-        <MealCard key={m.idMeal} data={m} />
-      ))}
+      <Filtre query={query} setQuery={setQuery} onSubmit={handleSubmit} />
+      {submittedQuery.toLowerCase() === "carrot" && filteredData.length > 0
+        ? filteredData.map((meal) => <MealCard key={meal.idMeal} data={meal} />)
+        : submittedQuery && <p>No carrot recipes found!</p>}
     </>
   );
 }

@@ -1,13 +1,14 @@
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Filtre from "./components/Filtre/Filtre";
 import { useEffect } from "react";
 import "./App.css";
 
 function App() {
   const location = useLocation();
 
-  const knownPaths: string[] = ["/", "/about", "/contact", "/quiz"]; // Constant
+  const knownPaths: string[] = ["/", "/recipe", "/contact", "/quiz"]; // Constant
 
   useEffect(() => {
     document.body.className = "body-default";
@@ -22,6 +23,8 @@ function App() {
   return (
     <>
       <NavBar />
+      <Filtre />
+
       <div className="pages">
         <Outlet />
       </div>

@@ -1,40 +1,11 @@
-/* .styled {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: #ff7f50;
-  background-image: linear-gradient(
-    to top left,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0)
-  );
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px
-    rgba(0, 0, 0, 0.6);
-}
-
-.styled:hover {
-  background-color: #f8581e;
-}
-
-.styled:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px
-    rgba(0, 0, 0, 0.6);
-} */
-
-.HomePage {
+/* .HomePage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   background-color: var(--light);
-}
+} */
 
 .HomeTitle {
   text-align: center;
@@ -151,4 +122,47 @@ span.riseShake {
   100% {
     transform: translateY(0) rotate(0);
   }
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--light);
+}
+
+.HeroBanner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px); /* Adjust for the NavBar height */
+  overflow: hidden;
+}
+
+.HeroBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.BannerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.BannerText h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.BannerText h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0 0;
 }

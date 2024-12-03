@@ -1,19 +1,31 @@
-.cardsection {
+.cards{
     display: flex;
-    flex-direction: column-row;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.mealName{
+font-size: 0.5em;
 }
 
 .picture {
-    width: 50vh;
-
+    width: 20vh;
 }
 
 .category {
-    font-size: 4em;
+    font-size: 0.5em;
 }
 
 .picture {
-    font-size: 1em;
+    font-size: 0.5em;
 } 
+
+.ingredient{
+    font-size:0.5em;
+}
 

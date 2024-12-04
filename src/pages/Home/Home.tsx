@@ -14,8 +14,8 @@ function Home() {
       <div className={style.HeroBanner}>
         <img src={heroBanner} alt="Carrot Field Hero Banner" />
         <div className={style.BannerText}>
-          <h1>CARROT MANIA</h1>
-          <h2>Répandez la bonté</h2>
+          <h1>KAROTAINE</h1>
+          <h2>Spread kindness</h2>
         </div>
       </div>
 

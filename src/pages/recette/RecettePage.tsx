@@ -1,9 +1,10 @@
-import { useLoaderData, Navigate } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import type { MealDataType } from "../../lib/definitions";
 import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
 import Filtre from "../../components/Filtre/Filtre";
 import style from "./recettePage.module.css";
+import AutoPlay from "../../components/slider/AutoPlay";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
@@ -46,6 +47,9 @@ function Recipe() {
               ))
             : submittedQuery && <p>No carrot recipes found!</p>}
         </section>
+        <div>
+          <AutoPlay data={data} />
+        </div>
       </section>
     </>
   );

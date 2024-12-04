@@ -4,9 +4,10 @@
   border: solid var(--primary-color);
   width: 15vw;
   align-items: center;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   padding-bottom: 1em;
   border-radius: 5px;
+  height: 15em;
 }
 
 .mealName {
@@ -51,4 +52,24 @@
 .h2ingredient {
   color: var(--secondary-color);
   margin-bottom: 1em;
+}
+.eatButton{
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: solid 2px var(--primary-color)
+
+    
+}
+.eatButton:hover{
+    background-color: var(--primary-color);
+    color: whitesmoke;
+
+}
+
+.versoCard{
+    width: 15em;
+    height: 15em;
+    padding-left: 1em;
 }

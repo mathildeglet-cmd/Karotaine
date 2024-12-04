@@ -17,14 +17,18 @@ export function MealCard({ data }: { data: MealDataType }) {
   };
 
   return (
-    <button type="button" onClick={handleIsOpenDetails}>
+    <button
+      className={style.buttonCard}
+      type="button"
+      onClick={handleIsOpenDetails}
+    >
       <section className={style.cards}>
         {!isOpenDetails && (
           <section>
             <h2 className={style.mealName}>{data.strMeal}</h2>
             <img
               className={style.picture}
-              src={data.strMealThumb} 
+              src={data.strMealThumb}
               alt="a meal"
             />
           </section>
@@ -43,7 +47,9 @@ export function MealCard({ data }: { data: MealDataType }) {
           </section>
         )}
       </section>
-      <button type="button" className={style.eatButton}>MANGER</button>
+      <button type="button" className={style.eatButton}>
+        MANGER
+      </button>
     </button>
   );
 }

@@ -15,13 +15,19 @@ function Recipe() {
   const [showPrompt, setShowPrompt] = useState(false);
 
   const handleFilter = () => {
-    return data.filter((meal) =>
-      Object.values(meal).join(" ").toLowerCase().includes("carrot"),
+    return data.filter(
+      (meal) =>
+        Object.values(meal)
+          .join(" ")
+          .toLowerCase()
+          .match(/\bcarrots?\b/), // Matches "carrot" or "carrots"
     );
   };
 
   const handleSubmit = () => {
-    if (query.toLowerCase() !== "carrot") {
+    const lowerCaseQuery = query.toLowerCase();
+    if (!lowerCaseQuery.match(/\bcarrots?\b/)) {
+      // Matches "carrot" or "carrots"
       setShowPrompt(true);
     } else {
       setSubmittedQuery(query);
@@ -32,7 +38,7 @@ function Recipe() {
   const filteredData = submittedQuery ? handleFilter() : [];
 
   if (showPrompt) {
-    alert("You didn't type carrot!");
+    alert("You didn't type carrot or carrots!");
     setShowPrompt(false);
   }
 
@@ -41,7 +47,8 @@ function Recipe() {
       <section className={style.recettePage}>
         <Filtre query={query} setQuery={setQuery} onSubmit={handleSubmit} />
         <section className={style.displayCards}>
-          {submittedQuery.toLowerCase() === "carrot" && filteredData.length > 0
+          {submittedQuery.toLowerCase().match(/\bcarrots?\b/) &&
+          filteredData.length > 0
             ? filteredData.map((meal) => (
                 <MealCard key={meal.idMeal} data={meal} />
               ))

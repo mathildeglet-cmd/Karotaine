@@ -51,6 +51,14 @@ function Contact() {
         <label htmlFor="principle">
           What main principles did the person transgress?
         </label>
+        <div className={style.principles}>
+          <div className={style.placeholder}>Helpful</div>
+          <div className={style.placeholder}>Kind</div>
+          <div className={style.placeholder}>Benign</div>
+          <div className={style.placeholder}>Calm</div>
+          <div className={style.placeholder}>Eat Carrots</div>
+        </div>
+
         <input
           type="text"
           id="principle"
@@ -114,13 +122,6 @@ function Contact() {
           )}
         </div>
       )}
-      <div className={style.principles}>
-        <div className={style.placeholder}>Benevolent</div>
-        <div className={style.placeholder}>Kind</div>
-        <div className={style.placeholder}>Benign</div>
-        <div className={style.placeholder}>Calm</div>
-        <div className={style.placeholder}>Eat Carrots</div>
-      </div>
     </div>
   );
 }

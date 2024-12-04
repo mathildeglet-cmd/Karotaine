@@ -4,6 +4,7 @@ import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";
 import Filtre from "../../components/Filtre/Filtre";
 import style from "./recettePage.module.css";
+import AutoPlay from "../../components/slider/AutoPlay";
 
 function Recipe() {
   const dataRecipe = useLoaderData();
@@ -46,6 +47,9 @@ function Recipe() {
               ))
             : submittedQuery && <p>No carrot recipes found!</p>}
         </section>
+        <div>
+          <AutoPlay data={data} />
+        </div>
       </section>
     </>
   );

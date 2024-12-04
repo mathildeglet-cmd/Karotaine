@@ -14,6 +14,9 @@ function Recipe() {
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [showPrompt, setShowPrompt] = useState(false);
 
+  const [count, setCount] = useState<number>(0);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+
   const handleFilter = () => {
     return data.filter((meal) =>
       Object.values(meal).join(" ").toLowerCase().includes("carrot"),
@@ -36,14 +39,29 @@ function Recipe() {
     setShowPrompt(false);
   }
 
+  console.log(isClicked);
+  console.log(count);
   return (
     <>
+      <section>
+        <h2 className={style.h2}>
+          Tu es un citoyen de rang : {count}
+        </h2>
+      </section>
+
       <section className={style.recettePage}>
         <Filtre query={query} setQuery={setQuery} onSubmit={handleSubmit} />
         <section className={style.displayCards}>
           {submittedQuery.toLowerCase() === "carrot" && filteredData.length > 0
             ? filteredData.map((meal) => (
-                <MealCard key={meal.idMeal} data={meal} />
+                <MealCard
+                  key={meal.idMeal}
+                  data={meal}
+                  count={count}
+                  setCount={setCount}
+                  isClicked={isClicked}
+                  setIsClicked={setIsClicked}
+                />
               ))
             : submittedQuery && <p>No carrot recipes found!</p>}
         </section>

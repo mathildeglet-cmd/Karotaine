@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       {" "}
-      <a href="/home">
+      <a href="/">
         <div className="logo">
           <img src={icon} alt="Carrot is the truth" />
         </div>

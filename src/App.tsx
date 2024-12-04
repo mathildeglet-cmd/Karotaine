@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 
 import { useEffect } from "react";
 import "./App.css";
-import icon from "../public/icon.png";
+import icon from "./assets/images/icon.png";
 
 function App() {
   const location = useLocation();

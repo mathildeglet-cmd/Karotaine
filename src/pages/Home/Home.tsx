@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import style from "./Home.module.css";
-import heroBanner from "../../../public/heroBanner.jpg";
+import heroBanner from "../../assets/heroBanner.jpg";
 import OriginalCarrot from "../../assets/images/OriginalCarrot.png";
 import FlatteredCarrot from "../../assets/images/FlatteredCarrot.png";
 import AngryCarrot from "../../assets/images/AngryCarrot.png";

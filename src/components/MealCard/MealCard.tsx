@@ -59,7 +59,7 @@ export function MealCard({ data, count, setCount, isClicked, setIsClicked}: { da
           className={style.eatButton}
           onClick={handleCounter}
         >
-          MANGER
+          EAT
         </button>
       </button>
     </>

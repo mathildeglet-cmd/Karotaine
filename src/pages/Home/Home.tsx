@@ -1,9 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import style from "./Home.module.css";
 import heroBanner from "../../assets/heroBanner.jpg";
-import OriginalCarrot from "../../assets/images/OriginalCarrot.png";
-import FlatteredCarrot from "../../assets/images/FlatteredCarrot.png";
-import AngryCarrot from "../../assets/images/AngryCarrot.png";
 import AutoPlay from "../../components/slider/AutoPlay";
 import CarrotBoy from "../../../public/CarrotBoy.png";
 
@@ -22,9 +19,6 @@ function Home() {
 
       <div className={style.PlaceholderImages}>
         <span className={style.riseShake}>
-          {/* <img src={OriginalCarrot} alt="Original Carrot" /> */}
-          {/* <img src={FlatteredCarrot} alt="Flattered Carrot" /> */}
-          {/* <img src={AngryCarrot} alt="Angry Carrot" /> */}
           <img src={CarrotBoy} alt="Original Carrot" />
         </span>
       </div>

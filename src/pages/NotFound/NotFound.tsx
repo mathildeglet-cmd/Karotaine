@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./NotFound.module.css";
-import carrotBoy from "/CarrotBoy.png"; // Adjusted to access from the public folder
+import carrotBoy from "/CarrotBoy.png"; 
 
 const NotFound = () => {
   const carrotRef = useRef<HTMLDivElement>(null);

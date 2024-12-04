@@ -23,14 +23,14 @@ function Recipe() {
         Object.values(meal)
           .join(" ")
           .toLowerCase()
-          .match(/\bcarrots?\b/), // Matches "carrot" or "carrots"
-    );
+          .match(/\bcarrots?\b/), 
+    ); 
   };
 
   const handleSubmit = () => {
     const lowerCaseQuery = query.toLowerCase();
     if (!lowerCaseQuery.match(/\bcarrots?\b/)) {
-      // Matches "carrot" or "carrots"
+     
       setShowPrompt(true);
     } else {
       setSubmittedQuery(query);

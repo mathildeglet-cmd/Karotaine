@@ -13,13 +13,9 @@ function Contact() {
     e.preventDefault();
 
     if (
-      ![
-        "Benevolent",
-        "Principle 2",
-        "Principle 3",
-        "Principle 4",
-        "Principle 5",
-      ].includes(mainPrinciple)
+      !["Benevolent", "Kind", "Benign", "Calm", "Eat carrots"].includes(
+        mainPrinciple,
+      )
     ) {
       alert("You must select one of the 5 main principles.");
       return;
@@ -60,7 +56,7 @@ function Contact() {
           id="principle"
           value={mainPrinciple}
           onChange={(e) => setMainPrinciple(e.target.value)}
-          placeholder="Enter a principle (e.g., Principle 1)"
+          placeholder="Enter a principle (e.g., Benevolent)"
           required
           className={style.input}
         />
@@ -120,10 +116,10 @@ function Contact() {
       )}
       <div className={style.principles}>
         <div className={style.placeholder}>Benevolent</div>
-        <div className={style.placeholder}>Principle 2</div>
-        <div className={style.placeholder}>Principle 3</div>
-        <div className={style.placeholder}>Principle 4</div>
-        <div className={style.placeholder}>Principle 5</div>
+        <div className={style.placeholder}>Kind</div>
+        <div className={style.placeholder}>Benign</div>
+        <div className={style.placeholder}>Calm</div>
+        <div className={style.placeholder}>Eat Carrots</div>
       </div>
     </div>
   );

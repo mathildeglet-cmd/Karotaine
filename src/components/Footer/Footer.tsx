@@ -1,4 +1,4 @@
-import icon from "../../../public/icon.png";
+import icon from "../../assets/images/icon.png";
 import style from "./Footer.module.css";
 
 function Footer() {

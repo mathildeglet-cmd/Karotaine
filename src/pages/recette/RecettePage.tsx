@@ -51,7 +51,7 @@ function Recipe() {
     <>
       <section>
         <h2 className={style.h2}>
-          Tu es un citoyen de rang : {count}
+          Rank citizen : {count}
         </h2>
       </section>
 

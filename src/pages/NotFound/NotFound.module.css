@@ -15,7 +15,7 @@
 }
 
 .message {
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: var(--primary-color);
 }
 
@@ -42,5 +42,5 @@
 }
 
 .blur {
-  background-color: #fd7d14a8;
+  background-color: #fd7d14e3;
 }

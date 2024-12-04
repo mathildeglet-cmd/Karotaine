@@ -27,6 +27,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "/score",
+        element: <ScorePage />,
+      },
+      {
         path: "*",
         element: <NotFound />,
       },

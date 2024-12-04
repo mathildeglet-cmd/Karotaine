@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import style from "./Home.module.css";
 import heroBanner from "../../../public/heroBanner.jpg";
 import OriginalCarrot from "../../assets/images/OriginalCarrot.png";
 import FlatteredCarrot from "../../assets/images/FlatteredCarrot.png";
 import AngryCarrot from "../../assets/images/AngryCarrot.png";
+import AutoPlay from "../../components/slider/AutoPlay";
 
 function Home() {
+  const dataRecepe = useLoaderData();
+  const data = dataRecepe.meals;
   return (
     <div className={style.HomePage}>
       <div className={style.HeroBanner}>
@@ -35,6 +38,9 @@ function Home() {
           <li>5 carrots a day</li>
           <li>5 carrots a day</li>
         </ul>
+      </div>
+      <div>
+        <AutoPlay data={data} />
       </div>
     </div>
   );

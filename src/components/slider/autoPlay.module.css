@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 70vw;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.slide {
+  margin: 1em;
+}
+
+.photoCarousel {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: solid var(--secondary-color);
+}

@@ -1,13 +1,17 @@
 .cards {
   display: flex;
   flex-direction: column;
-  border: solid var(--primary-color);
+
   width: 15vw;
   align-items: center;
   margin-bottom: 5vh;
   padding-bottom: 1em;
   border-radius: 5px;
   height: 15em;
+  @media screen and (max-width: 875px) {
+    width: 60vw;
+    height: 30vh;
+  }
 }
 
 .mealName {
@@ -17,20 +21,27 @@
 
 .picture {
   max-width: 15vw;
+  @media screen and (max-width: 875px) {
+    max-width: 60vw;
+  }
 }
 
 .category {
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .picture {
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .ingredient {
-  font-size: 1em;
+  font-size: 1vw;
   list-style: none;
   position: relative;
+
+  @media screen and (max-width: 875px) {
+    font-size: 4vw;
+  }
 }
 .ingredient::before {
   content: "";
@@ -43,33 +54,55 @@
   background-image: url("../../../public/bullet.png");
   background-size: contain;
   background-repeat: no-repeat;
+  @media screen and (max-width: 875px) {
+    width: 15px;
+    height: 15px;
+  }
 }
 .listIngredient {
   width: 13em;
   text-align: center;
   color: var(--primary-color);
+
+  @media screen and (max-width: 875px) {
+    width: 40vw;
+    height: 40vw;
+  }
 }
 .h2ingredient {
   color: var(--secondary-color);
   margin-bottom: 1em;
+  font-size: 1.2vw;
+  @media screen and (max-width: 875px) {
+    font-size: 4vw;
+  }
 }
-.eatButton{
-    background-color: var(--secondary-color);
-    border-radius: 5%;
-    padding: 1em;
-    margin-bottom: 1em;
-    border: solid 2px var(--primary-color)
-
-    
+.eatButton {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: solid 2px var(--primary-color);
+  @media screen and (max-width: 875px) {
+    margin-top: 3vh;
+  }
 }
-.eatButton:hover{
-    background-color: var(--primary-color);
-    color: whitesmoke;
-
+.eatButton:hover {
+  background-color: var(--primary-color);
+  color: whitesmoke;
 }
 
-.versoCard{
-    width: 15em;
-    height: 15em;
-    padding-left: 1em;
+.versoCard {
+  width: 15vw;
+  height: 15vw;
+  padding-left: 1vw;
+
+  @media screen and (max-width: 875px) {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+.buttonCard {
+  border-radius: 5px;
+  border: solid 2px var(--primary-color);
 }

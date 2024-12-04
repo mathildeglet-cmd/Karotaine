@@ -1,4 +1,4 @@
-import { useLoaderData, Navigate } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import type { MealDataType } from "../../lib/definitions";
 import { MealCard } from "../../components/MealCard/MealCard";
 import { useState } from "react";

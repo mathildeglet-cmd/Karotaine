@@ -9,7 +9,13 @@ import icon from "./assets/images/icon.png";
 function App() {
   const location = useLocation();
 
-  const knownPaths: string[] = ["/", "/recipe", "/contact", "/quiz"];
+  const knownPaths: string[] = [
+    "/",
+    "/recipe",
+    "/contact",
+    "/quiz",
+    "/conseil",
+  ];
 
   useEffect(() => {
     document.body.className = "body-default";

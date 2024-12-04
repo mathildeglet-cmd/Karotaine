@@ -13,7 +13,7 @@ function Contact() {
     e.preventDefault();
 
     if (
-      !["Benevolent", "Kind", "Benign", "Calm", "Eat carrots"].includes(
+      !["Helpful", "Kind", "Benign", "Calm", "Eat Carrots"].includes(
         mainPrinciple,
       )
     ) {
@@ -64,7 +64,7 @@ function Contact() {
           id="principle"
           value={mainPrinciple}
           onChange={(e) => setMainPrinciple(e.target.value)}
-          placeholder="Enter a principle (e.g., Benevolent)"
+          placeholder="Enter a principle (e.g., Helpful)"
           required
           className={style.input}
         />
